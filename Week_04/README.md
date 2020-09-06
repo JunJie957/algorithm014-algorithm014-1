@@ -15,8 +15,9 @@
 
   代码实现：
 
-`class Solution {
+class Solution {
 public:
+
 	int findMin(vector<int>& nums) {
 		if (nums.empty()) return 0;
 		int left = 0, right = nums.size() - 1, min = nums[0];
@@ -31,5 +32,5 @@ public:
 		}
 		return min;
 	}
-};`
+};
 
