@@ -14,21 +14,21 @@
 
   代码实现：
 
-`class Solution {
+class Solution {
 public:
-	int findMin(vector<int>& nums) {
-		if (nums.empty()) return 0;
-		int left = 0, right = nums.size() - 1, min = nums[0];
-		while (left <= right) {
-			int mid = left + (right - left) / 2;
-			if (nums[mid] >= nums[0]) {
-				left = mid + 1;
-			} else {
-				min = mid;
-				right = mid - 1;
-			}
+int findMin(vector<int>& nums) {
+	if (nums.empty()) return 0;
+	int left = 0, right = nums.size() - 1, min = nums[0];
+	while (left <= right) {
+	    int mid = left + (right - left) / 2;
+	    if (nums[mid] >= nums[0]) {
+	 	left = mid + 1;
+		} else {
+	   	   min = mid;
+		   right = mid - 1;
 		}
-		return min;
 	}
-};`
+	return min;
+   }
+};
 
